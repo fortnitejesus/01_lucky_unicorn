@@ -20,11 +20,10 @@ def num_check(question, low, high):
             print(error)
 
 
-# ***** Main Routine *****
 rounds_played = 0
 
 print("Welcome to Lucky Unicorn")
-# Ask user if played before
+
 show_instructions = ""
 while show_instructions != "yes":
     show_instructions = input("have you played this game before?").lower().strip()

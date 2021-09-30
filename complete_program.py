@@ -53,12 +53,13 @@ while play_again == "":
     elif 6 <= chosen_num <= 36:
      chosen = "donkey"
      balance -= 1
-    else:
-        if chosen_num % 2 == 0:
-            chosen = "horse"
-        else:
-            chosen = "zebra"
+    elif 37 <= chosen_num <= 99:
+        chosen = "horse" or "zebra"
+        decoration = "*"
         balance -= 0.5
+    else:
+        chosen = "goblin"
+        balance = 0
 
     print("You got a {}. Your balance is ${:.2f}".format(chosen,balance))
 
@@ -72,4 +73,4 @@ print("starting balance: ${:.2f}".format(how_much))
 print("final balance: ${:.2f}".format(balance))
 
 if balance <1:
-    print("Thank you for playing lucky unicorn")
+    print("🔥Thank you for playing lucky unicorn🔥")
